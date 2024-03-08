@@ -1,15 +1,14 @@
-const { randomBytes } = await import('node:crypto')
-export const serializeObj = (data) => {
-    return structuredClone(data)
-}
+
 
 
 export const generate_user_name = (name) => {
-    const id = randomBytes(2).toString('hex')
-    return `${name.slice(0, 5)}${id}`
+    const id = randomString(4, '0123456789abcdef'); // Generate a 4-character hexadecimal string
+    return `${name.slice(0, 5)}${id}`; // Combine the first 5 characters of the name with the ID
 }
 
-
+export const serializeObj = (data) => {
+    return structuredClone(data)
+}
 export const extractYearMonth = (dateString) => {
     if (!dateString) return ''
     // Split the date string into its components
@@ -22,3 +21,11 @@ export const extractYearMonth = (dateString) => {
     // Return the formatted string
     return `${year}-${month}`;
 }
+
+const randomString = (length, chars) => {
+    let result = '';
+    for (let i = length; i > 0; --i) {
+        result += chars[Math.floor(Math.random() * chars.length)];
+    }
+    return result;
+};
