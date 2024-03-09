@@ -1,13 +1,8 @@
 <script>
 	const { data } = $props();
 
-	$inspect(data);
+	//$inspect(data);
 </script>
-
-<svelte:head>
-	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
-</svelte:head>
 
 <!-- <section class="main">
 	<a href="/my-resumes">MY resumes</a> class="special-texts-black text-shadow-mine text-white"

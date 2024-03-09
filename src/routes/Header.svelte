@@ -1,10 +1,13 @@
 <script>
+	import { page } from '$app/stores';
 	import Login from '../lib/components/auth/Login.svelte';
 	import Register from '../lib/components/auth/Register.svelte';
 	import { goto, invalidateAll } from '$app/navigation';
-	const { data } = $props();
 
-	//console.log(data);
+	//const { data } = $props();
+
+	const data = $derived($page.data.user);
+	$inspect(data);
 	let show_auth = $state(false);
 	let sending = $state(false);
 	let show_auth_login = $state(true);
@@ -34,14 +37,14 @@
 			<div class=" border-b pb-2 border-[#ff61cc]">esumer</div></a
 		>
 		<div class="flex gap-4 items-center overflow-visible">
-			{#if data.user}
+			{#if data}
 				<button onclick={sign_out} class="shadow-mine-grad capitalize py-1 px-3 flex justify-center gap-4">
 					{#if sending}
 						<span
 							style="border-top-color:transparent"
 							class="w-8 h-8 border-4 border-gray-800 border-solid rounded-full animate-spin block"
 						></span>{:else}
-						<span>@{data.user.username}</span>
+						<span>@{data.username}</span>
 						<span class="flex gap-1 items-center"
 							>signout <iconify-icon icon="clarity:logout-solid"></iconify-icon></span
 						>
