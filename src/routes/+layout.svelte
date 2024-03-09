@@ -6,7 +6,7 @@
 	import 'iconify-icon';
 	const { data } = $props();
 
-	$inspect(data);
+	console.log(data);
 </script>
 
 <section class="app overflow-hidden">
