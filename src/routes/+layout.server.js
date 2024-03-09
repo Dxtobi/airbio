@@ -1,11 +1,12 @@
 export const load = async ({ locals }) => {
-    if (await locals.user) {
-        return {
-            user: locals.user
-        }
-    } else {
+    if (!locals.user) {
         return {
             user: undefined
         }
+    } else {
+        return {
+            user: locals.user
+        }
     }
+
 }
