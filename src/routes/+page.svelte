@@ -45,7 +45,6 @@
 		</div>
 		<div class="flex items-center gap-2 shadow-mine-grad py-1 px-4">
 			<span class="font-bold text-3xl">{data?.counts?.users}</span>
-			Users
 			<iconify-icon class=" text-3xl" icon="solar:users-group-two-rounded-line-duotone"></iconify-icon>
 		</div>
 		<div class="flex items-center py-1 px-4 custom-text gap-1">
