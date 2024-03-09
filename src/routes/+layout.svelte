@@ -14,8 +14,8 @@
 		<slot />
 	</main>
 
-	<footer class="border-t border-purple-300 fixed bottom-0 left-0 w-full bg-white">
-		<div class="w-full flex justify-between">
+	<footer class="border-t border-purple-300 bottom-0 left-0 w-full bg-white">
+		<div class="w-full flex md:flex-row flex-col justify-between text-sm md:text-[15px]">
 			<div class="text-center p-4">
 				Partially built with <span class="custom-text">LOVE</span>.
 			</div>
