@@ -1,7 +1,7 @@
 <script>
 	const { data } = $props();
 
-	//$inspect(data);
+	// $inspect(data);
 </script>
 
 <!-- <section class="main">
@@ -17,7 +17,11 @@
 		<div class="flex flex-col gap-8 items-center text-center md:items-start md:text-start md:px-4">
 			<div class="w-fit rounded-full px-4 py-2 border border-[#ff61cc] text-center cursor-help">AI powered.</div>
 			<p>Resume maker makes use of AI technology to improve your resume (up coming version).</p>
-			<a href="/my-resumes" class="shadow-mine-grad py-2 px-4 w-fit">Try For free</a>
+			{#if data.user}
+				<a href="/my-resumes" class="shadow-mine-grad py-2 px-4 w-fit">Go to files</a>
+			{:else}
+				<a href="/my-resumes" class="shadow-mine-grad py-2 px-4 w-fit">Try For free</a>
+			{/if}
 		</div>
 		<div class="w-full h-[50vh] bg-purple-50 rounded-3xl shadow-xl">
 			<img src="/rbt.jpg" alt="" class="w-full h-full object-cover rounded-3xl" />

@@ -4,10 +4,13 @@
 	import './styles.css';
 	import './print.css';
 	import 'iconify-icon';
+	const { data } = $props();
+
+	$inspect(data);
 </script>
 
 <section class="app overflow-hidden">
-	<Header />
+	<Header {data} />
 	<main id="main" class="py-20">
 		<slot />
 	</main>

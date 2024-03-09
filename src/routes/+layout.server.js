@@ -1,5 +1,5 @@
-export const load = ({ locals }) => {
-    if (locals.user) {
+export const load = async ({ locals }) => {
+    if (await locals.user) {
         return {
             user: locals.user
         }
