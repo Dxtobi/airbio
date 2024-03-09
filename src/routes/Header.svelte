@@ -27,7 +27,7 @@
 		sending = false;
 	}
 
-	console.log($page.data.user);
+	console.log($page.data);
 </script>
 
 <header class="play fixed top-0 left-0 w-full bg-white">
