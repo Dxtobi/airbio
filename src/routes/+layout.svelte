@@ -4,6 +4,7 @@
 	import './styles.css';
 	import './print.css';
 	import 'iconify-icon';
+	import Loader from '../lib/components/Loader.svelte';
 	const { data } = $props();
 
 	console.log(data);
@@ -11,6 +12,7 @@
 
 <section class="app overflow-hidden">
 	<Header {data} />
+	<Loader />
 	<main id="main" class="py-20">
 		<slot />
 	</main>
@@ -21,7 +23,7 @@
 				Partially built with <span class="custom-text">LOVE</span>.
 			</div>
 			<div class="text-center p-4">
-				<span class="custom-text">Version: 0.9.1</span>
+				<span class="custom-text">Version: 0.9.2</span>
 			</div>
 			<div class="text-center p-4">
 				Have any suggestion? <a href="https://twitter.com/programmer_dex" target="_blank" class="custom-text"

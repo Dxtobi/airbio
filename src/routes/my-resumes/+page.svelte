@@ -84,8 +84,16 @@
                         <a href={`/edit/${md.id}`} class="px-4 py-1 shadow-mine-grad text-white border rounded">Edit</a>
                         <button
                             class="py-1 px-4 font-bold text-2xl shadow-mine-red"
-                            onclick={() => delete_resume(md.id)}>&times;</button
+                            onclick={() => delete_resume(md.id)}
                         >
+                            {#if sending}
+                                <span
+                                    style="border-top-color:transparent"
+                                    class="w-8 h-8 border-4 border-gray-800 border-solid rounded-full animate-spin block"
+                                ></span>{:else}
+                                &times;
+                            {/if}
+                        </button>
                     </div>
                 </div>
             </div>

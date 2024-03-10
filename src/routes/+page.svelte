@@ -1,4 +1,6 @@
 <script>
+	import Auth from './Auth.svelte';
+
 	const { data } = $props();
 
 	// $inspect(data);
@@ -20,7 +22,7 @@
 			{#if data.user}
 				<a href="/my-resumes" class="shadow-mine-grad py-2 px-4 w-fit">Go to files</a>
 			{:else}
-				<a href="/my-resumes" class="shadow-mine-grad py-2 px-4 w-fit">Try For free</a>
+				<Auth />
 			{/if}
 		</div>
 		<div class="w-full h-[50vh] bg-purple-50 rounded-3xl shadow-xl">
