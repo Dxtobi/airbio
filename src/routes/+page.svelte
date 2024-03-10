@@ -15,10 +15,12 @@
 		<h3 class="text-center">Create resumes withing minutes</h3>
 	</div>
 
-	<div class="flex flex-col md:flex-row justify-center items-center gap-3 my-8 overflow-visible">
+	<div class="grid grid-cols-1 md:grid-cols-3 justify-center items-center gap-3 my-8 overflow-visible">
 		<div class="flex flex-col gap-8 items-center text-center md:items-start md:text-start md:px-4">
 			<div class="w-fit rounded-full px-4 py-2 border border-[#ff61cc] text-center cursor-help">AI powered.</div>
-			<p>Resume maker makes use of AI technology to improve your resume (up coming version).</p>
+			<p>
+				Elevate Your Resume with Cutting-Edge AI Technology. <span class="custom-text">(Version: 1.0.0)</span>
+			</p>
 			{#if data.user}
 				<a href="/my-resumes" class="shadow-mine-grad py-2 px-4 w-fit">Go to files</a>
 			{:else}
@@ -32,7 +34,7 @@
 			<div class="w-fit rounded-full px-4 border border-[#ff61cc] text-center cursor-help py-2">
 				Add your resume template.
 			</div>
-			<p>can you code HTML and css? if yes then soon you would be able to add and share your resume templates.</p>
+			<p>Can you code HTML and CSS? if yes then soon you would be able to add and share your resume templates.</p>
 			<a href="#me" id="me" class="shadow-mine-grad py-2 px-4 w-fit cursor-not-allowed" aria-disabled="true"
 				>Coming soon</a
 			>
