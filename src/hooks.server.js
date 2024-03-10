@@ -12,9 +12,8 @@ export const handle = async ({ event, resolve }) => {
         event.locals.user = serializeObj(event.locals.pb.authStore.model)
     } else {
         // console.log('empty')
-        event.locals.user = null
+        event.locals.user = undefined
     }
-
     // console.log(event.locals.pb.authStore.isValid)
     const response = await resolve(event)
 
