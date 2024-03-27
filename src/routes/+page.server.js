@@ -4,17 +4,17 @@ export const prerender = false;
 
 export const load = async ({ locals }) => {
 
-    // const users = await locals.pb.collection('user').getList();
-    // const resumes = await locals.pb.collection('resumes').getList();
-    // const users = await locals.pb.collection('users').getList();
+
+    const resumes = await locals.pb.collection('resumes').getList();
+    const users = await locals.pb.collection('users').getList();
 
 
     //would come back to this.
 
     return {
         counts: {
-            users: 8,//users?.totalItems,
-            resumes: 7// resumes?.totalItems,
+            users: users?.totalItems,
+            resumes: resumes?.totalItems,
         }
     }
 }

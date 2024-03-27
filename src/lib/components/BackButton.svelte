@@ -6,8 +6,6 @@
     }
 </script>
 
-<button
-    onclick={goback}
-    class="w-fit py-2 px-6 border-2 border-black rounded grid place-content-center font-bold shadow-mine-grad"
+<button onclick={goback} class="w-fit py-1 px-6 border grid place-content-center font-bold rounded-full"
     >&larr; Back</button
 >

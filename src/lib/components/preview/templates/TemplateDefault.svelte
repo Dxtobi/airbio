@@ -12,14 +12,12 @@
             {resume.first_name}
             {resume.second_name}
         </h2>
-        <h3 class=" font-semibold flex gap-3 items-center">
-            <span class=" capitalize text-2xl">{resume.profession}</span>
-            <span class="flex gap-2">
-                <span class="text-wrap w-fit text-sm"><span class="font-extralight">Email: </span>{resume.email}</span>
-                <span class="text-wrap text-sm"><span class="font-extralight">Website: </span>{resume.website}</span
-                ></span
-            >
-        </h3>
+
+        <span class=" capitalize">{resume.profession}</span>
+        <span class="flex justify-between">
+            <span class="text-wrap w-fit text-sm">{resume.email}</span>
+            <span class="text-wrap text-sm">{resume.website}</span></span
+        >
     </div>
     <div class="flex items-start">
         <aside class=" bg-slate-100 pl-5">
@@ -125,7 +123,7 @@
                                     <span class="font-bold capitalize">{pro.name}</span> -
                                 </div>
                                 <p>
-                                    {pro.details}
+                                    {pro.more_details}
                                 </p>
                             </div>
                         {/each}

@@ -16,7 +16,7 @@
     // $inspect($page.data.resume);
     let project = $derived({
         name: '',
-        details: '',
+        more_details: '',
         projects: $page.data?.resume?.projects,
         resume: $page.data?.resume?.id,
     });
@@ -74,7 +74,7 @@
                 <div class="flex flex-col gap-2 w-full md:w-[70%]">
                     <span class=" font-semibold capitalize">details</span>
                     <textarea
-                        bind:value={project.details}
+                        bind:value={project.more_details}
                         placeholder="Tell us more"
                         class="w-full max-h-60 rounded-lg border p-4 focus:border-2 transition min-h-40"
                         name="more_details"

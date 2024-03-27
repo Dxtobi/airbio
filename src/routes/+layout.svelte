@@ -7,7 +7,7 @@
 	import Loader from '../lib/components/Loader.svelte';
 	const { data } = $props();
 
-	console.log(data);
+	// console.log(data);
 </script>
 
 <section class="app overflow-hidden">
@@ -23,7 +23,7 @@
 				Partially built with <span class="custom-text">LOVE</span>.
 			</div>
 			<div class="text-center p-4">
-				<span class="custom-text">Version: 0.9.2</span>
+				<span class="custom-text">Version: 0.9.9</span>
 			</div>
 			<div class="text-center p-4">
 				Have any suggestion? <a href="https://twitter.com/programmer_dex" target="_blank" class="custom-text"

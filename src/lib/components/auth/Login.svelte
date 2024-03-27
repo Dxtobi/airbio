@@ -3,18 +3,27 @@
     let { switch_show_auth_login, switch_show_auth } = $props();
     let user_data = $state({ email: '', password: '' });
     let sending = $state(false);
-
+    let error = $state({ error: false, message: '' });
     async function Login() {
         sending = true;
+        error = { error: false, message: '' };
         try {
             const res = await fetch('/api/auth/login', {
                 method: 'PUT',
                 body: JSON.stringify(user_data),
             });
-            console.log(await res.json());
 
-            await invalidateAll();
-            switch_show_auth();
+            const resp = await res.json();
+            if (resp.susses) {
+                await invalidateAll();
+                switch_show_auth();
+            } else {
+                console.log(resp);
+                error = {
+                    error: resp.error,
+                    message: resp.message,
+                };
+            }
         } catch (e) {
             console.log(e);
         }
@@ -46,6 +55,12 @@
                 required
                 type="password"
             />
+        </div>
+
+        <div class="py-3 text-red-600 text-sm">
+            {#if error.error}
+                <span>{error.message}</span>
+            {/if}
         </div>
         <!--  -->
         <button

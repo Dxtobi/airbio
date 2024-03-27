@@ -19,7 +19,7 @@
 		<div class="flex flex-col gap-8 items-center text-center md:items-start md:text-start md:px-4">
 			<div class="w-fit rounded-full px-4 py-2 border border-[#ff61cc] text-center cursor-help">AI powered.</div>
 			<p>
-				Elevate Your Resume with Cutting-Edge AI Technology. <span class="custom-text">(Version: 1.0.0)</span>
+				Elevate Your Resume with Cutting-Edge AI Technology. <span class="custom-text">(Beta Version)</span>
 			</p>
 			{#if data.user}
 				<a href="/my-resumes" class="shadow-mine-grad py-2 px-4 w-fit">Go to files</a>

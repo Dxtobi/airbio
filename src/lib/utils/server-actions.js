@@ -149,7 +149,6 @@ export async function submit_form_lang(data) {
         return def_error
     }
 }
-
 export async function delete_lang(id) {
     console.log(id)
     try {
@@ -183,7 +182,6 @@ export async function submit_form_project(data) {
         return def_error
     }
 }
-
 export async function delete_project(id) {
     console.log(id)
     try {
@@ -200,8 +198,6 @@ export async function delete_project(id) {
     }
 }
 
-
-
 //CERTIFICATE
 export async function submit_form_cert(data) {
     try {
@@ -217,7 +213,6 @@ export async function submit_form_cert(data) {
         return def_error
     }
 }
-
 export async function delete_cert(id) {
     //  console.log(id)
     try {
@@ -233,7 +228,6 @@ export async function delete_cert(id) {
         return def_error
     }
 }
-
 
 const def_error = {
     susses: false,

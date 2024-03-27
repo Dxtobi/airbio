@@ -12,7 +12,7 @@
     // $inspect(resume);
 </script>
 
-<div class="grid grid-cols-1 md:grid-cols-2 gap-1 normal-font">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-1 normal-font min-h-screen">
     {#each temps as Pdf, i}
         <div class=" hover-to-effect-child cursor-pointer relative">
             <div class=" absolute right-0 -top-[10px] to-effect-child">

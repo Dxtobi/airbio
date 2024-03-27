@@ -3,7 +3,9 @@ import { serializeObj } from './lib/utils/helpers.utils';
 import { DATA_BASE_URL } from '$env/static/private';
 
 export const handle = async ({ event, resolve }) => {
-    event.locals.pb = new Pocketbase(DATA_BASE_URL ?? 'http://127.0.0.1:8090')
+    event.locals.pb = new Pocketbase(DATA_BASE_URL)
+
+    // event.locals.pb = new Pocketbase('http://127.0.0.1:8090')
     event.locals.pb.authStore.loadFromCookie(event.request.headers.get('cookie') || '');
 
 

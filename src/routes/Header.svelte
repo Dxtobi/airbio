@@ -22,11 +22,10 @@
 	}
 </script>
 
-<header class="play fixed top-0 left-0 w-full bg-white">
+<header class="play fixed top-0 left-0 w-full bg-[#ffffff00] z-50 backdrop-blur-sm">
 	<nav class="flex justify-between w-full items-center p-4">
 		<a href="/" class="montserrat__ text-xl w-[100px] flex custom-text"
-			><div class=" rotate-12 text-4xl font-bold hover:rotate-0 transition custom-text">R</div>
-			<div class=" border-b pb-2 border-[#ff61cc]">esumer</div></a
+			><img src="/favicon.svg" alt="" class=" w-12 h-12" /></a
 		>
 		<div class="flex gap-4 items-center overflow-visible">
 			{#if data?.user}

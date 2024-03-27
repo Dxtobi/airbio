@@ -65,12 +65,13 @@ p {
 }
 
 ::-webkit-scrollbar {
-	width: 5px;
+	width: 4px;
 	display: block;
 }
 
+
 ::-webkit-scrollbar-thumb {
-	background-color: var(--color-theme-1);
+	background-color: var(--color-theme-2);
 	/*Changethecolorasneeded*/
 	border-radius: 10px;
 	-webkit-border-radius: 10px;
@@ -148,12 +149,13 @@ p {
 }
 
 .special-texts-black {
-	-webkit-text-stroke: 1px #000000;
+	-webkit-text-stroke: 0.4px #000000;
 	transition: 100ms;
 	-webkit-transition: 100ms;
 	-moz-transition: 100ms;
 	-ms-transition: 100ms;
 	-o-transition: 100ms;
+	font-family: 'Play', sans-serif;
 }
 
 .text-shadow-mine {
