@@ -51,7 +51,7 @@
 
             {#if resume.summary.length > 0}
                 <h1 class="font-bold mb-2 w-full pb-2 border-gray-300 mt-6">Summery</h1>
-                <a href="#edu" type="button" onclick={switch_selected} class="w-full">
+                <a href="#ai" type="button" onclick={switch_selected} class="w-full">
                     <section class="  border p-4 rounded-md relative hover:border-purple-600 focus:border-purple-600">
                         <div>
                             <p>

@@ -82,6 +82,7 @@
 
                     <div class="flex justify-between w-full items-center">
                         <a href={`/edit/${md.id}`} class="px-4 py-1 shadow-mine-grad text-white border rounded">Edit</a>
+                        <a href={`/ai/${md.id}`} class="px-4 py-1 shadow-mine-grad text-white border rounded">Use Ai</a>
                         <button
                             class="py-1 px-4 font-bold text-2xl shadow-mine-red"
                             onclick={() => delete_resume(md.id)}

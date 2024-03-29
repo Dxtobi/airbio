@@ -11,7 +11,7 @@
     }
 </script>
 
-<a href="#edu" type="button" onclick={switch_selected} class="w-full">
+<a href="#ai" type="button" onclick={switch_selected} class="w-full">
     <div class={`my-2 relative border p-4 rounded-md hover:border-purple-600 focus:border-purple-600`}>
         <div class="font-bold capitalize">
             <span>{edu.school}</span> -

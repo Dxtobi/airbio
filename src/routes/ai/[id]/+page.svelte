@@ -77,7 +77,7 @@
         <section class="  p-4 md:w-1/2">
             <AIeditor resume={$page.data.resume} {id} {assign_select_to_state} />
         </section>
-        <aside class="md:w-[30%] w-full">
+        <aside class="md:w-[30%] w-full" id="ai">
             <section class="flex flex-col gap-8 min-h-screen p-4">
                 <div>
                     <h2 class=" text-xl mb-2">

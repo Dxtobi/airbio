@@ -13,7 +13,7 @@
     //  $inspect(resume?.expand?.experience);
 </script>
 
-<a href="#exp" type="button" onclick={switch_selected} class="w-full">
+<a href="#ai" type="button" onclick={switch_selected} class="w-full">
     <div class="my-2 relative border p-4 rounded-md hover:border-purple-600 focus:border-purple-600">
         <div class="flex flex-col">
             <h2 class="  capitalize">{exp.job_title}</h2>

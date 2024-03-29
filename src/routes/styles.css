@@ -34,8 +34,11 @@
 
 /* font-family: 'Abril Fatface', cursive;
 font-family: 'Montserrat', sans-serif;
-font-family: 'Play', sans-serif;
-font-family: 'Press Start 2P', cursive; */
+font-family: 'Play', sans-serif;*/
+.game {
+
+	font-family: 'Press Start 2P', cursive;
+}
 
 .lobster {
 	font-family: 'Lobster', cursive;
@@ -57,7 +60,7 @@ font-family: 'Press Start 2P', cursive; */
 	-webkit-text-fill-color: transparent;
 	-webkit-background-clip: text;
 	background-clip: text;
-	font-family: 'Play', sans-serif;
+	/* font-family: 'Play', sans-serif; */
 }
 
 p {
