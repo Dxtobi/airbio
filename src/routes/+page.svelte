@@ -50,7 +50,7 @@
 
 					<div class="rounded-xl border border-[#ffa04c] p-4 my-3 border-dashed">
 						<h3 class=" text-[1.3rem] md:text-[2rem] game">
-							Land More <span class="custom-text">Interviews</span>
+							More <span class="custom-text">Interviews</span>
 						</h3>
 					</div>
 					<div class=" rounded-xl p-4 my-3 border border-purple-500 border-dashed">
