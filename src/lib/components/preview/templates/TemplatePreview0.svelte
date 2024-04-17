@@ -12,8 +12,8 @@
             <h1 class="font-bold text-4xl capitalize">{resume?.first_name} {resume.second_name}</h1>
             <h1 class="font-semibold capitalize text-xl">{resume?.profession}</h1>
             <div class="flex gap-4">
-                <span>Email: {resume.email}</span>
-                <span>Website: {resume.website}</span>
+                <span> {resume.email}</span>
+                <span> {resume.website}</span>
             </div>
         </div>
         <section class="mt-6 px-6">

@@ -29,3 +29,29 @@ const randomString = (length, chars) => {
     }
     return result;
 };
+
+
+// Function to calculate completion percentage
+function completionPercentage(totalItems, total) {
+    return totalItems > 0 ? Math.round((totalItems / total) * 100, 2) : 0;
+}
+
+
+
+export function calcPercentage(data) {
+    const completionData = {};
+    for (const key in data) {
+        completionData[key] = completionPercentage(data[key].totalItems, data[key].perPage);
+    }
+
+    // Determine portfolio completion (heuristic based on certificates, projects and skills)
+    const portfolioCompletion = (completionData.certificates + completionData.projects + completionData.skills + completionData.experience) / 3;
+
+    console.log(completionData);
+    console.log(`Portfolio Completion: ${portfolioCompletion}% (This is a heuristic calculation based on certificates, projects and skills)`);
+
+    return {
+        completionData,
+        portfolioCompletion
+    }
+}

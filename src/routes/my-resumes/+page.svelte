@@ -52,7 +52,6 @@
                 message: response.message,
                 type: 'good',
             };
-
             // all_resume = response.data;
             show_new_model = false;
         } else {
@@ -72,7 +71,7 @@
         {#each all_resume as md}
             <div>
                 <div
-                    class="flex flex-col rounded-lg justify-between items-start min-h-56 border-t-2 border-b-2 p-4 transition hover:border-2 hover:border-purple-600"
+                    class="flex flex-col rounded-lg justify-between items-start min-h-56 border-t-2 border-b-2 p-4 transition border-2 hover:border-purple-600"
                 >
                     <div>
                         <h3 class="font-bold text-xl capitalize">{md.name}</h3>
@@ -81,12 +80,10 @@
                     </div>
 
                     <div class="flex justify-between w-full items-center">
-                        <a href={`/edit/${md.id}`} class="px-4 py-1 shadow-mine-grad text-white border rounded">Edit</a>
-                        <a href={`/ai/${md.id}`} class="px-4 py-1 shadow-mine-grad text-white border rounded">Use Ai</a>
-                        <button
-                            class="py-1 px-4 font-bold text-2xl shadow-mine-red"
-                            onclick={() => delete_resume(md.id)}
-                        >
+                        <a href={`/edit/${md.id}`} class="px-4 py-1 border rounded">Edit</a>
+                        <a href={`/ai/${md.id}`} class="px-4 py-1 border rounded">Ai</a>
+                        <a href={`/preview/${md.id}`} class="px-4 py-1 border rounded">Preview</a>
+                        <button class="py-1 px-4 font-bold text-2xl" onclick={() => delete_resume(md.id)}>
                             {#if sending}
                                 <span
                                     style="border-top-color:transparent"

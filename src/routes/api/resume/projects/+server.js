@@ -8,17 +8,31 @@ export async function PUT({ ...others }) {
         const data = await others.request.json()
 
 
-        // console.log(data)
-        const rtn = await others.locals.pb.collection('projects').create({ ...data });
-        const updated = { projects: [rtn.id, ...data.projects] }
-        await others.locals.pb.collection('resumes').update(data.resume, updated)
-        // // console.log(rtn)
-        return json({
-            susses: true,
-            error: false,
-            message: 'projects added',
-            data: rtn
-        })
+        if (data.new_) {
+            // console.log(data)
+            const rtn = await others.locals.pb.collection('projects').create({ ...data, user: others.locals.user.id });
+            const updated = { projects: [rtn.id, ...data.projects] }
+            await others.locals.pb.collection('resumes').update(data.resume, updated)
+            // // console.log(rtn)
+            return json({
+                susses: true,
+                error: false,
+                message: 'projects added',
+                data: rtn
+            })
+        } else {
+            // console.log(data)
+
+            const updated = { projects: [data.id, ...data.projects] }
+            await others.locals.pb.collection('resumes').update(data.resume, updated)
+            // // console.log(rtn)
+            return json({
+                susses: true,
+                error: false,
+                message: 'projects added',
+
+            })
+        }
 
     } catch (error) {
         console.log(error.message);

@@ -30,7 +30,12 @@
 	font-family: var(--font-body);
 }
 
-
+#chap-o button {
+	list-style: none;
+	padding: 2px 10px;
+	border: 1px solid;
+	border-radius: 9999px;
+}
 
 /* font-family: 'Abril Fatface', cursive;
 font-family: 'Montserrat', sans-serif;
@@ -188,6 +193,16 @@ input[type='text'] {
 	padding: 8px;
 }
 
+select {
+	text-transform: capitalize;
+	padding: 8px;
+
+}
+
+select:focus {
+	border-color: var(--color-theme-2);
+}
+
 textarea:focus {
 	border-color: var(--color-theme-2);
 }
@@ -202,6 +217,22 @@ input[type='email']:focus {
 
 input[type='password']:focus {
 	border-color: var(--color-theme-2);
+}
+
+.anim-effect-h {
+
+	animation: height_b 250ms cubic-bezier(0.47, 0, 0.745, 0.715);
+	-webkit-animation: height_b 350ms cubic-bezier(0.47, 0, 0.745, 0.715);
+}
+
+@keyframes height_b {
+	from {
+		height: 0%;
+	}
+
+	to {
+		height: inherit;
+	}
 }
 
 @media (min-width: 768px) {

@@ -3,9 +3,10 @@
     import * as nav from '$app/navigation';
     import BackButton from '../../../lib/components/BackButton.svelte';
 
+   // console.log($page.data);
     $effect(() => {
         nav.onNavigate((e) => {
-            console.log($page.url);
+        //    console.log($page);
         });
     });
 </script>

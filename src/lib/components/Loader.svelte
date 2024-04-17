@@ -1,5 +1,6 @@
 <script>
     import { navigating } from '$app/stores';
+    console.log(!!$navigating);
 </script>
 
 {#if !!$navigating}

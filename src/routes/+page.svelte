@@ -12,17 +12,25 @@
 <section class=" body-font section overflow-visible min-h-screen">
 	<div class="flex flex-col md:flex-row gap-8">
 		<div class=" w-full">
-			<h2 class="text-[3rem] md:text-[5rem] w-full font-bold cursor-not-allowed">
+			<h2 class="text-[3rem] md:text-[5rem] w-full font-bold cursor-not-allowed text-center">
 				Struggling to <span class="custom-text">Craft a Resume</span> That Gets Noticed?
 			</h2>
-			<div class="flex flex-col gap-8 items-center text-center md:items-start md:text-start my-3">
+			<div>
+				<p class=" my-4 text-2xl text-center">
+					Our Tools helps you to improve your chance of success on getting your dream job.
+				</p>
+			</div>
+			<div
+				class="flex flex-col gap-8 items-center text-center md:items-start md:text-start my-3 justify-center w-full"
+			>
 				{#if data.user}
-					<a href="/my-resumes" class="shadow-mine-grad py-2 px-4 w-full text-center">Go to files</a>
+					<a href="/my-resumes" class="shadow-mine-grad py-2 w-fit px-6 text-center self-center">Resumes</a>
 				{:else}
 					<Auth />
 				{/if}
 			</div>
-			<div class=" w-fit my-4 justify-between flex">
+			<div class="P-6 bg-gray-700 text-white"></div>
+			<div class=" gap-4 my-4 justify-center flex w-full">
 				<div class="flex items-center py-1 px-4 custom-text gap-1">
 					<span class="font-bold text-3xl lobster">2</span>
 					Template
@@ -37,41 +45,14 @@
 				</div>
 			</div>
 		</div>
-
-		<div class=" gap-3 my-8 overflow-visible w-full">
-			<div class="flex flex-col gap-8 md:px-4">
-				<div class=" columns-1 md:columns-2 gap-3">
-					<div class=" rounded-xl p-4 border border-[#d63cf5] border-dashed">
-						<h3 class=" text-[1.3rem] md:text-[2rem] game">
-							AI Highlights<br /> Your Skills & Achievements <br /> for<br />
-							<span class="custom-text"> Maximum Impact.</span>
-						</h3>
-					</div>
-
-					<div class="rounded-xl border border-[#ffa04c] p-4 my-3 border-dashed">
-						<h3 class=" text-[1.3rem] md:text-[2rem] game">
-							More <span class="custom-text">Interviews</span>
-						</h3>
-					</div>
-					<div class=" rounded-xl p-4 my-3 border border-purple-500 border-dashed">
-						<h3 class=" text-[1.3rem] md:text-[2rem] game">
-							Unlock Your Dream Job with <span class="custom-text">AI-Powered</span> Resume Building
-						</h3>
-					</div>
-				</div>
-			</div>
-		</div>
 	</div>
 
 	<br />
-	<br />
-	<br />
+
 	<h2 class="text-3xl font-bold">Tips on building a good resume that will get noticed:</h2>
 	<br />
 
-	<div
-		class="w-full bg-gray-950 text-gray-300 rounded-xl p-4 tips grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
-	>
+	<div class="w-full rounded-xl tips grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
 		<div>
 			<h2 class="text-2xl font-bold">Tailor Your Resume:</h2>
 			<p>
@@ -121,7 +102,10 @@
 		line-height: normal;
 	}
 
-	.tips div:hover {
-		color: white;
+	.tips div {
+		border: 1px solid;
+		border-style: dashed;
+		border-radius: 10px;
+		padding: 10px;
 	}
 </style>
